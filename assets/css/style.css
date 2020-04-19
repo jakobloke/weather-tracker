@@ -1,0 +1,9 @@
+header {
+    padding: 15px;
+    font-size: 30px;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+}
