@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
 <body>
     <header class="font-weight-bold text-center bg-dark text-white">Weather Dashboard</header>
 
-    <div class="flex-row justify-space-between">
+    <div class="row">
         <div class="col-3">
-            <div class="card">
-                <h2 class="card-header">Search for a City</h2>
-                <form id="cityInput" class="card-body">
-                    <input name="city" id="city" type="text" autofocus="true" class="form-input" />
-                    <button type="submit" class="btn bi bi-search">Search</button>
-                </form>
-            </div>
+            <form id="inputform">
+                <h3>Search for a City:</h3>
+                <input class="form-input form-label" type="text" placeholder="Search.." name="city" id="cityinput">
+                <button type="submit" class="btn fa fa-search" id="searchbrn"></button>
+            </form>
         </div>
 
         <div class="col-9" id="weather">
             <h3><span id="city"></span></h3>
-            <img id="weatherIcon">
-            <div>
-                <p id="temp"></p>
-                <p id="humid"></p>
-                <p id="wind"></p>
-                <p><span id="uvIndex" class=""></span></p>
-                <img id="uvicon">
+
+            <div id="results-container">
+                <h3< id="city-container"></h3>
+                <img id="weatherIcon">
+            
+                <div>
+                    <p id="temp"></p>
+                    <p id="humid"></p>
+                    <p id="wind"></p>
+                    <p><span id="uvIndex" class=""></span></p>
+                    <img id="uvicon">
+                </div>
             </div>
         </div>
 
@@ -41,7 +47,7 @@
         <div class="col-9">
             <div class="row hidden" id="hidden">
                 <div class="col-12">
-                    <div id="forecast-container" class="list-group"></div>
+                    <div id="forecast-container" class="list-group">
                     <h3 id="forecast"></h3>
                 </div>
             </div>
@@ -62,7 +68,7 @@
             <div class="card">
                 <div class="card-body" id="card2">
                     <h4 class="card-title" id="day2">Card 2</h4>
-                    <img id="day1icon" />
+                    <img id="day2icon" />
                     <p class="card-text" id="futuretemp2">Temp: </p>
                     <p class="card-text" id="futurehumidity2">Humidity: </p>
                 </div>
@@ -71,7 +77,7 @@
             <div class="card">
                 <div class="card-body" id="card3">
                     <h4 class="card-title" id="day3">Card 3</h4>
-                    <img id="day1icon" />
+                    <img id="day3icon" />
                     <p class="card-text" id="futuretemp3">Temp: </p>
                     <p class="card-text" id="futurehumidity3">Humidity: </p>
                 </div>
@@ -80,7 +86,7 @@
             <div class="card">
                 <div class="card-body" id="card4">
                     <h4 class="card-title" id="day4">Card 4</h4>
-                    <img id="day1icon" />
+                    <img id="day4icon" />
                     <p class="card-text" id="futuretemp4">Temp: </p>
                     <p class="card-text" id="futurehumidity4">Humidity: </p>
                 </div>
@@ -89,7 +95,7 @@
             <div class="card">
                 <div class="card-body" id="card5">
                     <h4 class="card-title" id="day5">Card 5</h4>
-                    <img id="day1icon" />
+                    <img id="day5icon" />
                     <p class="card-text" id="futuretemp5">Temp: </p>
                     <p class="card-text" id="futurehumidity5">Humidity: </p>
                 </div>
@@ -97,8 +103,10 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
